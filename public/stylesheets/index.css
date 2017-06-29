@@ -1,0 +1,156 @@
+body {
+  font-family: serif;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+width: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+margin: auto;
+}
+
+.carousel-inner {
+height: 600px;
+margin-bottom: 20px;
+}
+
+.carousel-caption h3 {
+  margin-bottom: 100px;
+}
+.navbar {
+  height: 100px;
+  background-color: #001133;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  line-height: 65px;
+  font-size: 30px;
+}
+
+.navbar-collapse .nav li a {
+  line-height: 60px;
+  font-size: 20px;
+  color: #fff;
+}
+
+ .navbar-collapse .nav > li > a:hover,
+ .navbar-collapse .nav > li > a:focus,
+ .navbar-collapse  .nav > li.active > a {
+  color: #b3ccff;
+}
+.navbar .navbar-brand:hover {
+  color: #b3ccff;
+}
+
+.marketing {
+  margin-left: -15px;
+}
+
+div .featurette {
+  margin-top: 100px;
+}
+
+div .featurette img {
+  width: 350px;
+  height: 220px;
+}
+
+.featurette p {
+  text-indent: 25px;
+}
+
+.transition {
+  height: 50px;
+  background-color: rgb(0, 230, 153);
+  margin-bottom: 50px;
+}
+
+.transition h2 {
+  text-align: center;
+  font-size: 22px;
+  line-height: 50px;
+}
+
+.information {
+  font-size: 18px;
+  margin-bottom: 50px;
+  margin-left: -15px;
+}
+
+.information h2 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.gallery {
+  margin-left: -15px;
+}
+
+.gallery img {
+  width: 350px;
+  height: 300px;
+}
+
+.gallery .thumbnail img {
+  padding: 0;
+  margin: 0;
+}
+/*=========================  transition for navbar menu  ========================================*/
+
+    .navbar-collapse .nav  a {
+
+          text-transform: uppercase;
+          transition: color 0.1s,background-color 0.1s,padding 0.5s ease-in;
+          color: #b3ccff;
+      }
+
+
+  .navbar-collapse .nav    a::before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 13px;
+          left: 15px;
+          height: 3px;
+          width: 75%;
+          background-color: #0044cc;
+          transform-origin: right top;
+          transform: scale(0, 1);
+          transition: color 0.1s,transform 0.2s ease-out;
+      }
+
+    .navbar-collapse .nav .middle-item::before{
+      width: 83%;
+    }
+
+    .navbar-collapse .nav    a:hover::before, a:focus::before {
+            transform-origin: left top;
+            transform: scale(1, 1);
+        }
+
+
+/*=========================  transition for navbar menu  ========================================*/
+.col-lg-4 {
+  text-align: center;
+}
+
+
+   footer {
+      background-color: #001133;
+      color: white;
+      height: 200px;
+      text-align: center;
+      font-family: serif;
+    }
+
+    footer a {
+      line-height: 180px;
+      padding-left: 20px;
+      text-shadow: 0.5px 0.5px 1px black;
+    }
+
+
+    footer a:hover{
+      color: #fff;
+    }

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Banja Vrdnik</title>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/menu.css">
+        <link rel="stylesheet" href="stylesheets/banjaVrdnik.css">
+        <link rel="stylesheet" href="stylesheets/contact.css">
+        <script src="https://use.fontawesome.com/b8ef3f0ce9.js"></script>
+  </head>
+  <body>
+
+  <% include ../partials/menu %>
+
+     <div class="container">
+       <div id="map"></div>
+     </div>
+
+     <div class="container info">
+
+       <div class="left col-md-4 col-sm-6">
+         <div class="flip-container" id="flip-toggle">
+      		<div class="flipper">
+      			<div class="front">
+              <img class="img-circle" src="https://res.cloudinary.com/nikolaalex/image/upload/v1498713029/hand-gesture_kscykm.jpg" width="80px" height="80px"/>
+              <h2>Pozovite nas</h2>
+            </div>
+      			<div class="back">
+              <h2>Brojevi telefona:</h2>
+      				<p>064/ 968 - 45 - 45 <br />
+              064/ 968 - 45 - 45</p>
+      			</div>
+      		</div>
+      	</div>
+       </div>
+
+       <div class="middle col-md-4 col-sm-6">
+         <div class="flip-container" id="flip-toggle">
+         <div class="flipper">
+           <div class="front">
+              <img class="img-circle" src="https://res.cloudinary.com/nikolaalex/image/upload/v1498713030/email_jrpt0r.jpg" width="80px" height="80px"/>
+              <h2>posaljite nam e-mail</h2>
+            </div>
+           <div class="back">
+             <h2>e-mail adrese:</h2>
+             <p>
+               bulovicdj@gmail.com <br />
+               bulovicdj@gmail.com
+           </p>
+           </div>
+         </div>
+       </div>
+       </div>
+
+       <div class="right col-md-4 col-sm-6">
+         <div class="flip-container" id="flip-toggle">
+         <div class="flipper">
+           <div class="front">
+              <img class="img-circle" src="https://res.cloudinary.com/nikolaalex/image/upload/v1498713038/home_xlvcu8.jpg" width="80px" height="80px"/>
+              <h2>posetite nas</h2>
+            </div>
+           <div class="back">
+             <h2>Adresa:</h2>
+             <p>
+               Apartman Bulovic 22408 Vrdnik, Srbija <br />
+               Zeleznicka 6, Vrdnik
+             </p>
+           </div>
+         </div>
+       </div>
+       </div>
+
+     </div>
+
+  <% include ../partials/footer %>
+
+     <script>
+       function initMap() {
+         var uluru = {lat: 45.1263008, lng: 19.7866696};
+         var map = new google.maps.Map(document.getElementById('map'), {
+           zoom: 16,
+           center: uluru,
+           styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+         });
+         var marker = new google.maps.Marker({
+           position: uluru,
+           map: map,
+           draggable: true,
+           animation: google.maps.Animation.DROP,
+           position : {lat: 45.1263008, lng: 19.7866696}
+         });
+
+         marker.addListener("click", toggleBounce);
+
+
+       }
+
+
+
+     </script>
+
+     <script async defer
+     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAdAADrXgViZXJ222XYLD5moyvylUUxPs&callback=initMap">
+     </script>
+
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+         <!-- Include all compiled plugins (below), or include individual files as needed -->
+         <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

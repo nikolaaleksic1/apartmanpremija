@@ -1,0 +1,52 @@
+body {
+  font-family: serif;
+}
+.section1 {
+  margin-top: 200px;
+  margin-bottom: 70px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #1a0000;
+}
+
+.lead {
+  text-align: justify;
+  font-size: 16px;
+  text-indent: 25px;
+  padding: 5px;
+}
+
+.featurette-heading {
+  text-align: center;
+  font-size: 22px;
+}
+
+.text-muted {
+  font-size: 18px;
+}
+
+.featurette-divider{
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+
+footer {
+  background-color: #001133;
+  color: white;
+  height: 200px;
+  text-align: center;
+
+}
+
+footer a {
+  line-height: 180px;
+  padding-left: 20px;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+
+footer a:hover{
+  color: #fff;
+}
