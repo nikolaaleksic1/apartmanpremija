@@ -1,3 +1,70 @@
+@media only screen and (max-width: 767px){
+  .navbar-wrapper .navbar {
+  background-color: #fff;
+  color: black;
+  height: auto;
+}
+
+.navbar-wrapper .navbar .navbar-brand {
+  color: black;
+  font-size: 25px;
+  margin-top: -20px;
+}
+
+.navbar-wrapper .navbar-collapse .nav li a {
+  font-size: 20px;
+  color: black;
+  line-height: inherit;
+}
+
+.navbar-wrapper .navbar-collapse .nav > li > a:hover,
+ .navbar-collapse .nav > li > a:focus,
+ .navbar-collapse  .nav > li.active > a {
+  color: rgb(0, 128, 128);
+}
+.navbar-wrapper .navbar .navbar-brand:hover {
+  color: rgb(0, 128, 128);
+}
+
+
+/*=========================  transition for navbar menu  ========================================*/
+
+   .navbar-wrapper .navbar-collapse .nav  a {
+
+          text-transform: uppercase;
+          transition: color 0.2s,background-color 0.2s,padding 0.5s ease-in;
+          color: rgb(0, 153, 153);
+      }
+
+
+ .navbar-wrapper .navbar-collapse .nav    a::before {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          height: 3px;
+          width: 100px;
+          background-color: rgb(0, 77, 77);
+          transform-origin: right top;
+          transform: scale(0, 1);
+          transition: color 0.1s,transform 0.2s ease-out;
+      }
+
+   .navbar-wrapper .navbar-collapse .nav .middle-item::before{
+      width: 155px;
+    }
+
+  .navbar-wrapper  .navbar-collapse .nav    a:hover::before, a:focus::before {
+            transform-origin: left top;
+            transform: scale(1, 1);
+        }
+
+
+
+}
+
+
 .navbar {
   height: 100px;
   background-color: #001133;

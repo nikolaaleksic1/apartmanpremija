@@ -1,3 +1,52 @@
+@media only screen and (max-width: 767px) {
+  
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+.carousel-inner {
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+#carousel-example-generic {
+  height: 300px;
+}
+
+
+.featurette {
+  text-align: center;
+}
+
+.gallery .thumbnail img {
+  width: 100%;
+}
+
+  .footer {
+  background-color: #99ffff;
+  color: black;
+  height: 200px;
+  text-align: center;
+
+}
+
+.footer a {
+  line-height: 180px;
+  padding-left: 10px;
+  text-shadow: 0.5px 0.5px 1px black;
+}
+
+
+.footer a:hover{
+  color: black;
+}
+  
+}
+
 body {
   font-family: serif;
 }
