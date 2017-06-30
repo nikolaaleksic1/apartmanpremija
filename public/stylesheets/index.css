@@ -49,13 +49,16 @@
 
 body {
   font-family: serif;
+  margin: 0;
+  padding: 0;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-width: 100%;
-background-size: cover;
-background-repeat: no-repeat;
-margin: auto;
+  position: absolute;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
 }
 
 .carousel-inner {

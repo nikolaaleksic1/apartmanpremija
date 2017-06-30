@@ -78,7 +78,7 @@
      </div>
 
   <% include ../partials/footer %>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <script>
        function initMap() {
          var uluru = {lat: 45.1263008, lng: 19.7866696};
@@ -179,7 +179,16 @@
 
        }
 
-
+    
+      $(window).scroll(function () {
+      	var sc = $(window).scrollTop()
+      	if (sc > 1) {
+      		$("#main-navbar").addClass("navbar-scroll")
+      	}
+      	else {
+      		$("#main-navbar").removeClass("navbar-scroll")
+      	}
+      });
 
      </script>
 
