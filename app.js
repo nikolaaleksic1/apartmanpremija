@@ -5,8 +5,8 @@ var mongoose = require("mongoose");
 var methodOverride = require("method-override");
 
 
-//mongoose.connect("mongodb://localhost/apartmanPremija");
-mongoose.connect("mongodb://alex:premija@ds143342.mlab.com:43342/premija");
+mongoose.connect("mongodb://localhost/apartmanPremija");
+//mongoose.connect("mongodb://alex:premija@ds143342.mlab.com:43342/premija");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
